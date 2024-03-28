@@ -1,0 +1,15 @@
+﻿  Source.cpp
+  Terminides.cpp
+  Génération de code en cours...
+Terminides.obj : error LNK2005: "public: __cdecl Terminides::Terminides(void)" (??0Terminides@@QEAA@XZ) déjà défini(e) dans Source.obj
+Terminides.obj : error LNK2005: "public: __cdecl Terminides::~Terminides(void)" (??1Terminides@@QEAA@XZ) déjà défini(e) dans Source.obj
+Terminides.obj : error LNK2005: "public: void __cdecl Terminides::attack(class Terminides)" (?attack@Terminides@@QEAAXV1@@Z) déjà défini(e) dans Source.obj
+Terminides.obj : error LNK2005: "public: class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl Terminides::getDescription(void)" (?getDescription@Terminides@@QEAA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ) déjà défini(e) dans Source.obj
+Terminides.obj : error LNK2005: "public: int __cdecl Terminides::getHealth(void)" (?getHealth@Terminides@@QEAAHXZ) déjà défini(e) dans Source.obj
+Terminides.obj : error LNK2005: "public: class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl Terminides::getName(void)" (?getName@Terminides@@QEAA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ) déjà défini(e) dans Source.obj
+Terminides.obj : error LNK2005: "public: int __cdecl Terminides::getpower(void)" (?getpower@Terminides@@QEAAHXZ) déjà défini(e) dans Source.obj
+Terminides.obj : error LNK2005: "public: void __cdecl Terminides::setDescription(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?setDescription@Terminides@@QEAAXV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) déjà défini(e) dans Source.obj
+Terminides.obj : error LNK2005: "public: void __cdecl Terminides::setHealth(int)" (?setHealth@Terminides@@QEAAXH@Z) déjà défini(e) dans Source.obj
+Terminides.obj : error LNK2005: "public: void __cdecl Terminides::setName(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?setName@Terminides@@QEAAXV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) déjà défini(e) dans Source.obj
+Terminides.obj : error LNK2005: "public: void __cdecl Terminides::setpower(int)" (?setpower@Terminides@@QEAAXH@Z) déjà défini(e) dans Source.obj
+C:\Users\GAME1\Desktop\Amongus\Adventure Divers\x64\Debug\Adventure Divers.exe : fatal error LNK1169: un ou plusieurs symboles définis à différentes reprises ont été rencontrés
