@@ -1,4 +1,5 @@
-﻿Terminides.obj : error LNK2005: "public: __cdecl Terminides::Terminides(void)" (??0Terminides@@QEAA@XZ) déjà défini(e) dans Source.obj
+﻿  Source.cpp
+Terminides.obj : error LNK2005: "public: __cdecl Terminides::Terminides(void)" (??0Terminides@@QEAA@XZ) déjà défini(e) dans Source.obj
 Terminides.obj : error LNK2005: "public: __cdecl Terminides::~Terminides(void)" (??1Terminides@@QEAA@XZ) déjà défini(e) dans Source.obj
 Terminides.obj : error LNK2005: "public: void __cdecl Terminides::attack(class Terminides)" (?attack@Terminides@@QEAAXV1@@Z) déjà défini(e) dans Source.obj
 Terminides.obj : error LNK2005: "public: class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > __cdecl Terminides::getDescription(void)" (?getDescription@Terminides@@QEAA?AV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@XZ) déjà défini(e) dans Source.obj
