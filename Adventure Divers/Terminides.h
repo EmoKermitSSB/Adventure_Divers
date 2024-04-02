@@ -1,17 +1,13 @@
 #pragma once
 #include <iostream>
 
-enum class Element {
-	normal
-};
-
-class Terminides
-{
+class Terminides {
 private:
 	std::string name;
-	int health;
+	int health; 
 	std::string description;
 	int power;
+
 
 public:
 	Terminides();
@@ -30,7 +26,6 @@ public:
 	int getpower();
 	void setpower(int p);
 
-	void attack(Terminides target);
-
+	void attack(Terminides& target);
 
 };

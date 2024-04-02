@@ -68,7 +68,7 @@ void Terminides::setpower(int p)
 	power = p;
 }
 
-void Terminides::attack(Terminides target)
+void Terminides::attack(Terminides& target)
 {
 	target.setHealth(target.getHealth() - getpower());
 }

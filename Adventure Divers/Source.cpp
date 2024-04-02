@@ -2,9 +2,16 @@
 #include "Terminides.h"
 #include <vector>
 #include <fstream>
-using namespace std;
+
 
     int main()
     {
+        Terminides p1;
+        std::cout << p1 << std::endl;
+    }
+
+    void TestApp()
+    {
 
     }
+
