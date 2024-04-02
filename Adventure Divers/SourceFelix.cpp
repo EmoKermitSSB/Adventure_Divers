@@ -2,6 +2,7 @@
 #include "Terminides.h"
 #include <vector>
 #include <fstream>
+#include <thread>
 using namespace std;
 
 void afficherimage(string image) {
