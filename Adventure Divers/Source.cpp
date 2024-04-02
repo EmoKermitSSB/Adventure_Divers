@@ -1,13 +1,7 @@
-
 #include <iostream>
-#include "Terminides.cpp"
-using namespace std;
+#include "Terminides.h"
+#include <vector>
 
-int main()
-{
-    // Print standard output
-    // on the screen
-    cout << "Welcome to GFG";
-
-    return 0;
+int main() {
+	std::cout << "hello world";
 }
