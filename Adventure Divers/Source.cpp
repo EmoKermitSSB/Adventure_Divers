@@ -3,6 +3,7 @@
 #include <vector>
 #include <fstream>
 
+using namespace std;
 
 void afficherimage(string image) {
     ifstream infile(image);
