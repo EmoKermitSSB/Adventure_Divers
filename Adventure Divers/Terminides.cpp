@@ -3,7 +3,7 @@
 
 Terminides::Terminides()
 {
-	setName("");
+	setName("Ecorcheur");
 	setHealth(50);
 	setDescription("Terminides tres normal mais super cool quand meme");
 	setpower(10);

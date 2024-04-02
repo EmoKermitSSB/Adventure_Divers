@@ -4,7 +4,9 @@
 #include <fstream>
 using namespace std;
 
-    int main() {
-
-
-    }
+void TestApp() 
+{
+    Terminides T1;
+    std::cout << "T1";
+}
+        

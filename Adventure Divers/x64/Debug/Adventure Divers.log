@@ -1,2 +1,14 @@
 ﻿  Source.cpp
-  Adventure Divers.vcxproj -> C:\Users\karar\OneDrive\Documents\GitHub\Adventure_Divers\x64\Debug\Adventure Divers.exe
+  SourceAuguste.cpp
+  SourceCelyan.cpp
+  SourceClement.cpp
+  SourceFelix.cpp
+C:\Users\karar\OneDrive\Documents\GitHub\Adventure_Divers\Adventure Divers\SourceFelix.cpp(11,16): error C3861: 'getline' : identificateur introuvable
+C:\Users\karar\OneDrive\Documents\GitHub\Adventure_Divers\Adventure Divers\SourceFelix.cpp(16,9): error C2601: 'main' : définitions de fonctions locales non conformes
+  C:\Users\karar\OneDrive\Documents\GitHub\Adventure_Divers\Adventure Divers\SourceFelix.cpp(7,34):
+  cette ligne comporte un '{' qui n'est pas équilibré
+  
+C:\Users\karar\OneDrive\Documents\GitHub\Adventure_Divers\Adventure Divers\SourceFelix.cpp(7,34): error C1075: '{' : jeton correspondant introuvable
+  SourceGabriel.cpp
+  Terminides.cpp
+  Génération de code en cours...
