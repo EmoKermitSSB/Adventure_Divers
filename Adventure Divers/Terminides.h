@@ -4,7 +4,7 @@
 class Terminides {
 private:
 	std::string name;
-	int health; 
+	int health;
 	std::string description;
 	int power;
 
@@ -28,4 +28,5 @@ public:
 
 	void attack(Terminides& target);
 
+	virtual void receiveDamage(int attackValue);
 };

@@ -3,10 +3,10 @@
 
 Terminides::Terminides()
 {
-	setName("Ecorcheur");
-	setHealth(50);
+	setName("Charognard");
+	setHealth(20);
 	setDescription("Terminides tres normal mais super cool quand meme");
-	setpower(10);
+	setpower(30);
 
 }
 Terminides::~Terminides()
@@ -71,6 +71,11 @@ void Terminides::setpower(int p)
 void Terminides::attack(Terminides& target)
 {
 	target.setHealth(target.getHealth() - getpower());
+
 }
 
 
+void Terminides::receiveDamage(int attackValue)
+{
+	setHealth(getHealth() - attackValue);
+}
