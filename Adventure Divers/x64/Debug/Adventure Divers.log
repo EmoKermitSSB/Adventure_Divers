@@ -1,2 +1,4 @@
 ﻿  Player.cpp
-C:\Users\karar\OneDrive\Documents\GitHub\Adventure_Divers\Adventure Divers\Player.cpp(3,9): error C2600: 'Player::Player' : impossible de définir une fonction membre spéciale générée par le compilateur (doit être déclarée d'abord dans la classe)
+  Source.cpp
+  Génération de code en cours...
+  Adventure Divers.vcxproj -> C:\Users\karar\OneDrive\Documents\GitHub\Adventure_Divers\x64\Debug\Adventure Divers.exe
