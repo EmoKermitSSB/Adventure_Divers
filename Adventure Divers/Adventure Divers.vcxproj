@@ -130,10 +130,14 @@
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="Terminides.cpp" />
+    <ClCompile Include="TerminidesChasseur.cpp" />
+    <ClCompile Include="TerminidesTitanBille.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Player.h" />
     <ClInclude Include="Terminides.h" />
+    <ClInclude Include="TerminidesChasseur.h" />
+    <ClInclude Include="TerminidesTitanBille.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

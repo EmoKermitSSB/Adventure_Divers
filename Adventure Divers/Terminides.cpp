@@ -4,8 +4,8 @@
 Terminides::Terminides()
 {
 	setName("Charognard");
-	setHealth(20);
-	setDescription("Terminides tres normal mais super cool quand meme");
+	setHealth(10);
+	setDescription("Un Terminides tres normal mais tres mechant quand meme.");
 	setpower(30);
 
 }
@@ -20,7 +20,10 @@ std::string Terminides::getName() {
 void Terminides::setName(std::string n)
 {
 	for (int i = 0; i < n.size(); i++) {
-		if (!isalpha(n[i])) {
+		if (n[i] == 32) {
+
+		}
+		else if (!isalpha(n[i])) {
 			name = "-1";
 			return;
 		}
