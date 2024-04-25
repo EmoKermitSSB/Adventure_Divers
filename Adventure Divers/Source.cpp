@@ -16,7 +16,15 @@ TerminidesTitanBille t3;
 
 void EndGame() {
     //Vous remercie d'avoir jouer :}
-    std::system("cls");
+    if (p1.getHealth() == 0) {
+        std::cout << "\n-------------";
+        std::cout << "Les Terminides vous ont eux et la democratie par la meme occasion";
+    }
+    else {
+        std::cout << "\n--------------";
+        std::cout << "Vous avez reussi a survivre, Bien Joue Soldat !!";
+    }
+    std::cout << "------------------\n";
     std::cout << "\n----------------------";
     std::cout << "Merci d'avoir Jouer !!";
     std::cout << "----------------------\n";
@@ -65,6 +73,8 @@ int main() {
     std::cout << "Il existe un enchainement secret qui permet de oneshot l'ennemi a vous de le trouver sans mourir";
     std::cout << "\n---------------------------------------------------------------------------------------------\n";
     std::cout << "Vous infligez 10 degats au ennemi";
+    std::cout << "\n----------------------------------------------------\n";
+    std::cout << "Pensez a mettre les majuscules pour effectuer les combos";
     std::cout << "\n--------------------------------\n";
     std::cout << "Bonne Chance soldat et que l'amerique vous sauve !";
 
@@ -81,7 +91,8 @@ int main() {
         std::cout << "Un " << t1.getName() << " se trouve sur votre route \n";
         std::cout << t1.getpower() << " Degat\n";
         std::cout << t1.getHealth() << " HP\n";
-        std::cout << t1.getDescription() << endl;
+        std::cout << t1.getDescription() << endl <<endl;
+        std::cout << "<<<<<<<<<< " << "Divers a " << p1.getHealth() << " Hp !" << " >>>>>>>>>>" << endl;
 
         string input;
         std::cin >> input;
@@ -89,10 +100,11 @@ int main() {
         while (TER1 == true) {
 
 
-            // Demande à l'utilisateur de saisir un combo
+            
             std::cout << "\n-------------------------------\n";
             std::cout << "Degat : ZSDZQ\n";
             std::cout << "Soin : QDZS\n";
+            std::cout << "Retenez Bien le combo que vous voulez faire \n";
             std::cout << endl << "Appuyer sur une lettre pour continuer..." << endl;
             string input;
             std::cin >> input;
@@ -115,9 +127,9 @@ int main() {
             auto it = stratagemes.find(combo);
             if (it != stratagemes.end()) {
                 // Active le stratagème correspondant
-                activerStratageme(it->second);
+                
                 if (comboverif == "ZSDZQ") {
-                    std::system("cls");
+                    activerStratageme(it->second);
                     std::cout << endl << "<<<<<<<<<< " << t1.getName() << " Hp de Base = 10 " << " >>>>>>>>>>" << endl;
                     p1.attack(t1);
                     std::cout << endl << "<<<<<<<<<< " << t1.getName() << " Hp Actuel= " << t1.getHealth() << " >>>>>>>>>>" << endl;
@@ -128,7 +140,7 @@ int main() {
                 }
 
                 if (comboverif == "ZZDD") {
-                    std::system("cls");
+                    activerStratageme(it->second);
                     std::cout << endl << "<<<<<<<<<< " << t1.getName() << " Hp de Base = 10 " << " >>>>>>>>>>" << endl;
                     t1.setHealth(0);
                     std::cout << endl << "<<<<<<<<<< " << t1.getName() << " Hp = " << t1.getHealth() << " >>>>>>>>>>" << endl;
@@ -139,7 +151,7 @@ int main() {
                 }
 
                 if (comboverif == "QDZS") {
-                    std::system("cls");
+                    activerStratageme(it->second);
                     p1.setHealth(p1.getHealth() + 10);
                     std::cout << endl << "<<<<<<<<<< " << p1.getName() << " Hp = " << p1.getHealth() << " >>>>>>>>>>" << endl;
                     std::cout << "<<<<<<<<<< " << "Vous avez regagnez 10 HP" << " >>>>>>>>>>" << endl;
@@ -195,10 +207,11 @@ int main() {
     {
         std::system("cls");
         std::cout << "\n-------------------------------\n";
-        std::cout << "Un " << t2.getName() << " se trouve sur votre route \n";
+        std::cout << "Un " << t2.getName() << " se trouve sur votre route... \n";
         std::cout << t2.getpower() << " Degat\n";
         std::cout << t2.getHealth() << " HP\n";
-        std::cout << t2.getDescription() << endl;
+        std::cout << t2.getDescription() << endl<<endl;
+        std::cout << "<<<<<<<<<< " << "Divers a " << p1.getHealth() << " Hp !"<< " >>>>>>>>>>" << endl;
 
         string input;
         std::cin >> input;
@@ -210,6 +223,7 @@ int main() {
             std::cout << "\n-------------------------------\n";
             std::cout << "Degat : ZSDZQ\n";
             std::cout << "Soin : QDZS\n";
+            std::cout << "Retenez Bien le combo que vous voulez faire \n";
             std::cout << endl << "Appuyer sur une lettre pour continuer..." << endl;
             string input;
             std::cin >> input;
@@ -232,9 +246,10 @@ int main() {
             auto it = stratagemes.find(combo);
             if (it != stratagemes.end()) {
                 // Active le stratagème correspondant
-                activerStratageme(it->second);
+                
                 if (comboverif == "ZSDZQ") {
-                    std::system("cls");
+                    activerStratageme(it->second);
+                    
                     std::cout << endl << "<<<<<<<<<< " << t2.getName() << " Hp de Base = 30 " << " >>>>>>>>>>" << endl;
                     p1.attack(t2);
                     std::cout << endl << "<<<<<<<<<< " << t2.getName() << " Hp Actuel= " << t2.getHealth() << " >>>>>>>>>>" << endl;
@@ -246,7 +261,8 @@ int main() {
                 }
 
                 if (comboverif == "ZZDD") {
-                    std::system("cls");
+                    activerStratageme(it->second);
+                    
                     std::cout << endl << "<<<<<<<<<< " << t2.getName() << " Hp de Base = 30 " << " >>>>>>>>>>" << endl;
                     t2.setHealth(0);
                     std::cout << endl << "<<<<<<<<<< " << t2.getName() << " Hp = " << t2.getHealth() << " >>>>>>>>>>" << endl;
@@ -257,7 +273,8 @@ int main() {
                 }
 
                 if (comboverif == "QDZS") {
-                    std::system("cls");
+                    activerStratageme(it->second);
+                    
                     p1.setHealth(p1.getHealth() + 10);
                     std::cout << endl << "<<<<<<<<<< " << p1.getName() << " Hp = " << p1.getHealth() << " >>>>>>>>>>" << endl;
                     std::cout << "<<<<<<<<<< " << "Vous avez regagnez 10 HP" << " >>>>>>>>>>" << endl;
@@ -320,7 +337,8 @@ int main() {
         std::cout << "Un " << t3.getName() << " se trouve sur votre route \n";
         std::cout << t3.getpower() << " Degat\n";
         std::cout << t3.getHealth() << " HP\n";
-        std::cout << t3.getDescription() << endl;
+        std::cout << t3.getDescription() << endl << endl;
+        std::cout << "<<<<<<<<<< " << "Divers a " << p1.getHealth() << " Hp !" << " >>>>>>>>>>" << endl;
 
         string input;
         std::cin >> input;
@@ -328,10 +346,11 @@ int main() {
         while (TER3 == true) {
 
 
-            // Demande à l'utilisateur de saisir un combo
+            
             std::cout << "\n-------------------------------\n";
             std::cout << "Degat : ZSDZQ\n";
             std::cout << "Soin : QDZS\n";
+            std::cout << "Retenez Bien le combo que vous voulez faire \n";
             std::cout << endl << "Appuyer sur une lettre pour continuer..." << endl;
             string input;
             std::cin >> input;
@@ -354,9 +373,10 @@ int main() {
             auto it = stratagemes.find(combo);
             if (it != stratagemes.end()) {
                 // Active le stratagème correspondant
-                activerStratageme(it->second);
+                
                 if (comboverif == "ZSDZQ") {
-                    std::system("cls");
+                    activerStratageme(it->second);
+                    
                     std::cout << endl << "<<<<<<<<<< " << t3.getName() << " Hp de Base = 50 " << " >>>>>>>>>>" << endl;
                     p1.attack(t3);
                     std::cout << endl << "<<<<<<<<<< " << t3.getName() << " Hp Actuel= " << t3.getHealth() << " >>>>>>>>>>" << endl;
@@ -368,7 +388,8 @@ int main() {
                 }
 
                 if (comboverif == "ZZDD") {
-                    std::system("cls");
+                    activerStratageme(it->second);
+                    
                     std::cout << endl << "<<<<<<<<<< " << t3.getName() << " Hp de Base = 50 " << " >>>>>>>>>>" << endl;
                     t3.setHealth(0);
                     std::cout << endl << "<<<<<<<<<< " << t3.getName() << " Hp = " << t3.getHealth() << " >>>>>>>>>>" << endl;
@@ -379,7 +400,8 @@ int main() {
                 }
 
                 if (comboverif == "QDZS") {
-                    std::system("cls");
+                    activerStratageme(it->second);
+                    
                     p1.setHealth(p1.getHealth() + 10);
                     std::cout << endl << "<<<<<<<<<< " << p1.getName() << " Hp = " << p1.getHealth() << " >>>>>>>>>>" << endl;
                     std::cout << "<<<<<<<<<< " << "Vous avez regagnez 10 HP" << " >>>>>>>>>>" << endl;
@@ -419,6 +441,7 @@ int main() {
                 std::cin >> continuer;
 
                 if (continuer != 'o' && continuer != 'O') {
+                    std::system("cls");
                     EndGame();
                     break; // Quitte la boucle si l'utilisateur ne veut pas continuer
                 }
