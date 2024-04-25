@@ -92,9 +92,9 @@ void activerStratageme(const Stratageme& stratageme) {
 int main() {
     // Liste des stratagèmes disponibles avec leur code de combo associé
     unordered_map<string, Stratageme> stratagemes = {
-        {"ZSDZQ", {"Airstrike", "Lance une frappe aerienne sur la zone ciblee."}},
-        {"ZZDD", {"500 KG Bombs", "Fait tomber le pouvoir de la démocratie."}},
-        {"QDZS", {"Supply Drop", "Largue un conteneur de fournitures pour ravitailler les troupes."}}
+        {"ZSDZQ", {"Airstrike", "Fais pleuvoir la liberte sur l'ennemi."}},
+        {"ZDSSS", {"Secret !!! 500 KG Bombs", "Fait tomber le pouvoir de la democratie."}},
+        {"QDZS", {"Stim", "Vous vous injectez une Stim."}}
         // Ajoute d'autres stratagèmes avec leurs combos si nécessaire
     };
 
@@ -186,7 +186,7 @@ int main() {
 
                 }
 
-                if (comboverif == "ZZDD") {
+                if (comboverif == "ZDSSS") {
                     activerStratageme(it->second);
                     std::cout << endl << "<<<<<<<<<< " << t1.getName() << " Hp de Base = 10 " << " >>>>>>>>>>" << endl;
                     t1.setHealth(0);
@@ -309,7 +309,7 @@ int main() {
 
                 }
 
-                if (comboverif == "ZZDD") {
+                if (comboverif == "ZDSSS") {
                     activerStratageme(it->second);
                     
                     std::cout << endl << "<<<<<<<<<< " << t2.getName() << " Hp de Base = 30 " << " >>>>>>>>>>" << endl;
@@ -439,7 +439,7 @@ int main() {
 
                 }
 
-                if (comboverif == "ZZDD") {
+                if (comboverif == "ZDSSS") {
                     activerStratageme(it->second);
                     
                     std::cout << endl << "<<<<<<<<<< " << t3.getName() << " Hp de Base = 50 " << " >>>>>>>>>>" << endl;
