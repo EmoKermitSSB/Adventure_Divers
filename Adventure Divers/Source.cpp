@@ -27,7 +27,18 @@ TerminidesChasseur t2;
 TerminidesTitanBille t3;
 
 
+#pragma comment(lib, "winmm.lib")
+void playmusic(const char* music, bool loop) {
+    if (loop) {
+        PlaySoundA(music, NULL, SND_FILENAME | SND_ASYNC | SND_LOOP);
+    }
+    else {
+        PlaySoundA(music, NULL, SND_FILENAME | SND_ASYNC);
+    }
+}
+
 void EndGame() {
+    
     //Vous remercie d'avoir jouer :}
     if (p1.getHealth() == 0) {
         std::cout << "\n-------------";
@@ -37,6 +48,7 @@ void EndGame() {
         std::cout << "\n--------------";
         std::cout << "Vous avez reussi a survivre, Bien Joue Soldat !!";
     }
+    
     std::cout << "------------------\n";
     std::cout << "\n----------------------";
     std::cout << "Merci d'avoir Jouer !!";
@@ -44,8 +56,9 @@ void EndGame() {
     std::cout << "\n----------------------";
     std::cout << "Vous avez tue " << Index << " Terminides";
     std::cout << "----------------------\n";
+    playmusic("Music/EndMission.wav", true);
     exit(0);
-
+    
 }
 
 void afficherimage(string image) {
@@ -57,18 +70,6 @@ void afficherimage(string image) {
         }
     }
 }
-
-#pragma comment(lib, "winmm.lib")
-void playmusic(const char* music, bool loop) {
-    if (loop) {
-        PlaySoundA(music, NULL, SND_FILENAME | SND_ASYNC | SND_LOOP);
-    }
-    else {
-        PlaySoundA(music, NULL, SND_FILENAME | SND_ASYNC);
-    }
-}
-
-
 
 bool TER1 = true;
 bool TER2 = false;
