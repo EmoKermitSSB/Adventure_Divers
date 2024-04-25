@@ -5,6 +5,19 @@
 #include "TerminidesTitanBille.h"
 #include <vector>
 #include <unordered_map>
+#include <string>
+#include <Windows.h>
+#include <mmsystem.h>
+#include <fstream>
+#include <thread>
+#include <chrono>
+#include <conio.h>
+#include <map>
+#include <cstdlib>.
+
+#include <ctime>
+#include <algorithm>
+#include <random>
 
 using namespace std;
 int Index = 0;
@@ -35,6 +48,28 @@ void EndGame() {
 
 }
 
+void afficherimage(string image) {
+    ifstream infile(image);
+    if (infile.is_open()) {
+        string line;
+        while (getline(infile, line)) {
+            cout << line << endl;
+        }
+    }
+}
+
+#pragma comment(lib, "winmm.lib")
+void playmusic(const char* music, bool loop) {
+    if (loop) {
+        PlaySoundA(music, NULL, SND_FILENAME | SND_ASYNC | SND_LOOP);
+    }
+    else {
+        PlaySoundA(music, NULL, SND_FILENAME | SND_ASYNC);
+    }
+}
+
+
+
 bool TER1 = true;
 bool TER2 = false;
 bool TER3 = false;
@@ -63,6 +98,14 @@ int main() {
         // Ajoute d'autres stratagèmes avec leurs combos si nécessaire
     };
 
+    afficherimage("imageAscii/HelldiversPose.txt");
+    
+    playmusic("Music/HellTheme.wav", true);
+    string input;
+    std::cin >> input;
+    
+
+    std::system("cls");
     //Introduction / Tuto
     std::cout << "Bienvenue dans AdventureDivers !";
     std::cout << "\n----------------------------------\n";
@@ -76,7 +119,9 @@ int main() {
     std::cout << "\n----------------------------------------------------\n";
     std::cout << "Pensez a mettre les majuscules pour effectuer les combos";
     std::cout << "\n--------------------------------\n";
-    std::cout << "Bonne Chance soldat et que l'amerique vous sauve !";
+    std::cout << "Bonne Chance soldat et que la Super Terre vous sauve !";
+
+    
 
     string Startgame;
     std::cin >> Startgame;
@@ -87,7 +132,9 @@ int main() {
     if (Startgame.length() >= 0) {
 
         std::system("cls");
+        
         std::cout << "\n-------------------------------\n";
+        afficherimage("imageAscii/Terminides.txt");
         std::cout << "Un " << t1.getName() << " se trouve sur votre route \n";
         std::cout << t1.getpower() << " Degat\n";
         std::cout << t1.getHealth() << " HP\n";
@@ -206,7 +253,9 @@ int main() {
     if (TER1 == false)
     {
         std::system("cls");
+        
         std::cout << "\n-------------------------------\n";
+        afficherimage("imageAscii/Terminides2.txt");
         std::cout << "Un " << t2.getName() << " se trouve sur votre route... \n";
         std::cout << t2.getpower() << " Degat\n";
         std::cout << t2.getHealth() << " HP\n";
@@ -333,7 +382,10 @@ int main() {
     if (TER3 == true)
     {
         std::system("cls");
+        
+        
         std::cout << "\n-------------------------------\n";
+        afficherimage("imageAscii/Terminides3.txt");
         std::cout << "Un " << t3.getName() << " se trouve sur votre route \n";
         std::cout << t3.getpower() << " Degat\n";
         std::cout << t3.getHealth() << " HP\n";
